@@ -19,3 +19,14 @@ from rich.table import Table
 console = Console()
 ```
 - when in a LONG for-loop which is also the main one in the script let's say, use a TQDM to show progress!
+- use jaxtyping to annotate tensors operations and functions:
+The name 'jax'typing is now historical, we support all of the above and have no JAX dependency!
+from jaxtyping import Float
+from torch import Tensor
+# Accepts floating-point 2D arrays with matching axes
+```bash
+def matrix_multiply(x: Float[Tensor, "dim1 dim2"],
+                    y: Float[Tensor, "dim2 dim3"]
+                  ) -> Float[Tensor, "dim1 dim3"]:
+    ...
+```
