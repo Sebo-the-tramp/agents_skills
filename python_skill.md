@@ -30,3 +30,4 @@ def matrix_multiply(x: Float[Tensor, "dim1 dim2"],
                   ) -> Float[Tensor, "dim1 dim3"]:
     ...
 ```
+for logging alwasy use 'loguru'
